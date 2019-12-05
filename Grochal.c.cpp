@@ -243,6 +243,57 @@ int histogram(char* p, int Pocet) {
 	return 0;
 }
 
+int vypis2(char *p, int pocet){
+  int z = 0, k = 0;
+  if(pocet == 0){
+    printf("Sprava nieje nacitana");
+  }
+  else{
+    scanf("%d %d\n", &z, &k);
+    for(int i = z; i<=k; i++){
+      if((p[i] >= 'A' && p[i] <= 'Z')||(p[i] >= 'a' && p[i]<= 'z')){
+        printf("%c", p[i]);
+      }
+      else{
+        printf("+");
+      }
+    }
+  }
+  printf("\n");
+  return 0;
+}
+
+int vlozenie(char *p, int pocet){
+  char r[10];
+  int pocitadlo = 0;
+  if(pocet == 0){
+	  printf("Nie je k dispozicii upravena sprava");
+  }
+  else{
+  while(r[pocitadlo] != '\n'){
+    scanf("%c", &r[pocitadlo]);
+    if(r[pocitadlo] >='A' && r[pocitadlo] <= 'Z'){
+      pocitadlo++;
+    }
+    else{
+      printf("Retazec nieje mozne vlozit");
+      break;
+    }
+  }
+    if((pocitadlo > 10) && (pocet % 2 != 0) && (pocet + pocitadlo > 1000)){
+      printf("Retazec nieje mozne vlozit");
+    }
+    else{
+      for(int i = 0; i< pocitadlo; i++){
+        p[pocet % 2 +i]= r[i];
+      }
+	  printf("Retazec sa vlozil");
+    }
+  }
+  return 0;
+}
+
+
 int main(){
 	char Test, PovodnyText[1000] = { 0 }, UpravenyText[1000] = { 0 };
 	int PocetZnakov = 0, PocetZnakovUpravena = 0;
