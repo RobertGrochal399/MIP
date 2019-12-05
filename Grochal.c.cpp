@@ -177,30 +177,28 @@ int histogram(char* p, int Pocet) {
 
 			if ((30 < cast[k]) && (cast[k] <= 40)) {
 				znak[k] = 4;
+			}
+			if ((40 < cast[k]) && (cast[k] <= 50)) {
+				znak[k] = 5;
+			}
 
-				if ((40 < cast[k]) && (cast[k] <= 50)) {
-					znak[k] = 5;
-				}
+			if ((50 < cast[k]) && (cast[k] <= 60)) {
+				znak[k] = 6;
+			}
 
-				if ((50 < cast[k]) && (cast[k] <= 60)) {
-					znak[k] = 6;
-				}
+			if ((60 < cast[k]) && (cast[k] <= 70)) {
+				znak[k] = 7;
+			}
 
-				if ((60 < cast[k]) && (cast[k] <= 70)) {
-					znak[k] = 7;
-				}
+			if ((70 < cast[k]) && (cast[k] <= 80)) {
+				znak[k] = 8;
+			}
+			if ((80 < cast[k]) && (cast[k] <= 90)) {
+				znak[k] = 9;
+			}
 
-				if ((70 < cast[k]) && (cast[k] <= 80)) {
-					znak[k] = 8;
-
-				}
-				if ((80 < cast[k]) && (cast[k] <= 90)) {
-					znak[k] = 9;
-				}
-
-				if ((90 < cast[k]) && (cast[k] <= 100)) {
-					znak[k] = 10;
-				}
+			if ((90 < cast[k]) && (cast[k] <= 100)) {
+				znak[k] = 10;
 			}
 		}
 
